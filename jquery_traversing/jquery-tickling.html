@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>jquery_tickling</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script>
+        $(document).ready(function(){
+            $("span").parent().css({"color":"blue","border":"solid 4px blue"})
+        })
+    </script>
+    <style>
+        .ancestors *
+        {
+            display: block;
+            border: dotted 3px brown;
+            color: lightslategrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ancestors">
+        <div style="width: 500px;">div (great grandparent)
+        <ul>
+            ul(grandparent)
+            <li> li (parent)
+                <span> span(child)
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam ut, recusandae provident sed harum qui quia enim minus repudiandae, nulla, eius voluptatibus doloribus neque reiciendis adipisci cumque maxime vitae beatae </p>
+                </span>
+            </li>
+        </ul>
+        </div>
+    </div>
+
+</body>
+</html>
